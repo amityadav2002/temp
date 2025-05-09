@@ -1,0 +1,33 @@
+- remove frame5 and create stacked widget below frame 4.
+- add labels to each stacked widets and align vertically stackedwidget each time.
+- main window stylesheet - edit *{} and make background: transparent; and add #centremenusubcontainer { background-color: #2c313c }      #frame4 { backgrond-color: 16181d  border-radius: 10px};
+- centre menu sub conatiner -> layout spacing all zero and btn in frame4 aliign right and label in frame4 allign Hcentr.
+- centremenusubcontainer allign left.
+- //centre menu container - width = 200// 0  and for centre menu sub conatiner -> width = 200;
+- Inside main body container - new widgets - header container and mainbody content and allign them vertically.
+- In header container , add3 frame side by side and in rightmost frame add 3 buttons( - O  x) and allign horizontally  and then entire widget allign horizontally and then header container allign top.
+- In second of this frame, add 2 buttons ( icons are user/account symbol and ...)
+- In first frame, add label and instead of text , add img logo as resource and then set scaled contents= checkedbox. Now add one more label '22 gui'. Allign horizontal to entire frame and set maximum size of img label to 30x30.
+- In these new frames, make layout spaces as 0.
+- left frame allign left right frame allignright and centre frame allign centre horizontally.
+- modern ui text - make bold and increase point size to 11.
+- main body cntainer, style sheet - remove bg color code from it. Main window style sheet, add - #headercontainer { background-color: #2c313c;}. Main body content - layout space to 0 and verticlly policy expanding. 
+- add 2 widget to main body container - rightmenuconatiner and main conents container. Now, inside right menu container-> rightmenusub-container-> frame-> btn(x) and label(right menu). Now allign frame horizontally.
+- to right menu subcontainer , add stacked widgets(more page and help page). allign labels more and help vertically. add #frame8 in line with #frame4 in mainwindow stylesheet. allign right menu text to hori Centre, x symbol to right and then right menu sub continer to right
+   right menu container and its sub conatiner layout space make 0. and add #right menusubcontainer style with #centre menu subconatiner.
+- Now , add layout  margin(5) to centre container, left menu subcontainer and right menu sub container.
+
+- In mainwindow.cpp.
+#include "mainwindow.h"
+MyDialog mDialog;
+mDialog.setModal(true);
+mDialog.exec();
+
+
+
+
+- In maiwindow.h - include Mydialog.h
+in private add - MyDialog *mDialog 
+then in mainwindow.cpp - inside that slot -
+ mDialog = new MyDialog(this);
+mDialog->show();
