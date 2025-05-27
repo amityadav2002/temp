@@ -1,0 +1,173 @@
+/* ------------------------------------------------------------------
+ * DARK THEME
+ * ------------------------------------------------------------------*/
+
+QMainWindow {
+    background-color: #202020;  /* slightly lighter than #191414 */
+}
+
+
+/* 0.  GLOBAL FALLBACK (covers QMainWindow, centralWidget, QFrame, etc.) */
+QWidget {
+    background-color: #1E1E1E;    /* softer black */
+    color: #FFFFFF;
+    font-family: "Segoe UI", sans-serif;
+}
+
+QWidget#centralwidget {
+    background-color: #202020;  /* Spotify dark gray */
+    color: #FFFFFF;
+}
+
+
+/* 1. HEADERS / TITLES (keep them bright) */
+QLabel[heading="true"]            { font-size: 18px; font-weight: 600; }
+QLabel[subheading="true"]         { font-size: 14px; font-weight: 500; }
+
+/* 2. PUSH-BUTTONS -------------------------------------------------- */
+QPushButton {
+    background-color: #1DB954;     /* Spotify green */
+    color:            #FFFFFF;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+QPushButton:hover   { background-color: #1ED760; }
+QPushButton:pressed { background-color: #1AA34A; }
+
+/* 3. TEXT INPUTS --------------------------------------------------- */
+QLineEdit,
+QTextEdit,
+QPlainTextEdit {
+    background-color: #2C2C2C;   /* Softer than pure black */
+    color: #FFFFFF;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+QLineEdit:hover, QLineEdit:focus {
+    border: 1px solid #1DB954;  /* Spotify green */
+}
+
+
+/* 4. COMBO BOX ----------------------------------------------------- */
+QComboBox {
+     background-color: #2C2C2C;
+    color:            #FFFFFF;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 4px;
+}
+QComboBox QAbstractItemView {
+    background-color: #282828;
+    color: #FFFFFF;
+    selection-background-color: #1DB954;
+}
+QComboBox:hover, QLineEdit:focus {
+    border: 1px solid #1DB954;  /* Spotify green */
+}
+
+/* 5. TAB WIDGET ---------------------------------------------------- */
+QTabWidget::pane { border: 1px solid #333; background: #121212; }
+QTabBar::tab {
+    background: #121212;
+    color:      #FFFFFF;
+    padding: 6px 12px;
+    border: 1px solid #333;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+QTabBar::tab:selected { background: #1DB954; color: #191414; }
+
+/* 6. LIST/TABLE/TREE VIEWS ---------------------------------------- */
+QListView,
+QTableView,
+QTreeView {
+    background-color: #121212;
+    color:            #FFFFFF;
+    gridline-color:   #333;
+    selection-background-color: #1DB954;
+}
+
+/* 7. SCROLL BARS --------------------------------------------------- */
+QScrollBar:vertical,
+QScrollBar:horizontal {
+    background: #121212;
+    width: 8px; height: 8px;
+}
+QScrollBar::handle:vertical,
+QScrollBar::handle:horizontal {
+    background: #1DB954;
+    border-radius: 4px;
+}
+QScrollBar::add-line,
+QScrollBar::sub-line { background: none; }
+
+/* 8. SLIDERS ------------------------------------------------------- */
+QSlider::groove:horizontal,
+QSlider::groove:vertical {
+    background: #333;
+    border-radius: 3px;
+}
+QSlider::groove:horizontal { height: 6px; }
+QSlider::groove:vertical   { width:  6px; }
+
+QSlider::handle:horizontal,
+QSlider::handle:vertical {
+    background: #1DB954;
+    border-radius: 6px;
+    width: 12px; height: 12px;
+    margin: -4px 0;          /* centres the knob */
+}
+
+/* 9. GROUP BOX ----------------------------------------------------- */
+QGroupBox {
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+    color: #CCCCCC;  /* Light gray instead of black */
+    background-color: transparent;  /* Blend with parent */
+}
+
+
+QGroupBox,
+QFrame,
+QTabWidget::pane {
+    background-color: #2A2A2A;    /* slightly lighter than background */
+    border: 1px solid #3A3A3A;
+    border-radius: 6px;
+}
+
+
+
+/* 10. PROGRESS BAR ------------------------------------------------- */
+QProgressBar {
+    background-color: #282828;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    color: #FFFFFF;
+}
+QProgressBar::chunk { background-color: #1DB954; }
+
+/* 11. TOOL TIPS ---------------------------------------------------- */
+QToolTip {
+    background-color: #282828;
+    color: #FFFFFF;
+    border: 1px solid #1DB954;
+}
+
+/* 12. MENUBAR & MENUS --------------------------------------------- */
+QMenuBar           { background-color: #121212; color: #FFFFFF; }
+QMenuBar::item     { padding: 4px 10px; }
+QMenuBar::item:selected { background: #1DB954; color: #191414; }
+
+QMenu              { background-color: #191414; color: #FFFFFF; }
+QMenu::item:selected { background-color: #1DB954; color: #191414; }
